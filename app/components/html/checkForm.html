@@ -1,0 +1,38 @@
+
+<style media="screen">
+  .inputs_list{
+    width: 90%;
+    margin-left: 6px;
+  }
+  check-form .col-sm-4{
+    margin-top: 30px;
+  }
+</style>
+<div class="row input_form">
+        <h3>בדיקת חשבון מוגבל</h3>
+        <div class="row">
+            <div class=" col-sm-12">
+                <text > פרטי ציק</text>
+            </div>
+
+        </div>
+        <div class="row inputs_list">
+          <div class="col-sm-4" ng-repeat='item in $ctrl.list_inputs'>
+                <div class="input_details" >
+
+                    <input ng-if='item.name != "IDPerson"' class='' ng-model='$ctrl[item.name]' ng-change="$ctrl.changeAccount()">
+                    <input ng-if='item.name == "IDPerson"' class='' ng-model='$ctrl[item.name]' ng-change="$ctrl.changePerson()">
+
+                    <div>
+                        <text class='text_input '
+                        ng-class='{ " green" : $ctrl.list_inputs[$index].status=="correct"  ,  " red" : $ctrl.list_inputs[$index].status=="limited",
+                                  }' >{{item.txt}}</text>
+                        <span > <i class="fa "
+                             ng-class='{ "fa-check-circle-o green" : $ctrl.list_inputs[$index].status=="correct"  ,  "fa-times-circle-o red" : $ctrl.list_inputs[$index].status=="limited",
+                                        "fa-spinner" :   $ctrl.list_inputs[$index].status=="pending"   }' ng-show='item.status != false'></i></span>
+                    </div>
+                </div>
+
+        </div>
+        </div>
+</div>

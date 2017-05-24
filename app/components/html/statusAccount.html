@@ -1,0 +1,28 @@
+
+<div class='status_account' ng-if='$ctrl.status'>
+    <div class="h5" ng-class = '{ red: $ctrl.status == "limited" ,  green: $ctrl.status == "correct" }'>
+        {{$ctrl.statusText.head}}
+    </div>
+    <div class="details" dir=rtl>
+        {{$ctrl.statusText.details}}
+    </div>
+    <div class="expired red" dir=rtl>
+        {{$ctrl.statusText.expired}}
+    </div>
+
+
+    <div class="details_show" ng-show='$ctrl.statusText.hideDetails && !$ctrl.statusText.hideDetails.show' ng-click='$ctrl.statusText.hideDetails.show = !$ctrl.statusText.hideDetails.show  '>
+        <span class="h12 bold" > הצג פרטים נוספים </span>
+        <span class='fa fa-chevron-left green chevron'></span>
+    </div>
+    <div class="details_show"  ng-show='$ctrl.statusText.hideDetails && $ctrl.statusText.hideDetails.show ' ng-click='$ctrl.statusText.hideDetails.show = !$ctrl.statusText.hideDetails.show  '>
+        <span class="h12 bold" > הסתר פרטים נוספים </span>
+        <span class='fa fa-chevron-up green chevron'></span>
+    </div>
+
+    <div class="text_hide" ng-show = '$ctrl.statusText.hideDetails.show' dir = rtl>
+        <div class="" ng-repeat= "item in $ctrl.statusText.hideDetails.txt">
+            <small  > {{item}}  </small>
+        </div>
+    </div>
+</div>

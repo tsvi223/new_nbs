@@ -1,0 +1,7 @@
+<ul>
+  <li class="car-row" ng-repeat="car in $ctrl.cars"
+    ng-class="{ selected: $ctrl.isSelected(car) }"
+    ng-click="$ctrl.onSelect(car)">
+    <span class="">{{car.id}}</span> {{car.manufacturer}}
+ </li>
+</ul>

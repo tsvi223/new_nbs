@@ -1,0 +1,181 @@
+app-element{
+    font-family: Open Sans Hebrew, Open Sans Hebrew Light;
+    height: 100%;
+}
+
+top-side{
+    height: 8vh;
+}
+
+left-side{
+    height: 92vh;
+    background-color: #fafafa;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06),
+                0px 2px 4px 0px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(0, 0, 0, 0.06),
+                0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+account-limited{
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06),
+                0px 2px 4px 0px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(0, 0, 0, 0.06),
+                0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    height: 92vh;
+    background-color: #f2f2f2;
+}
+
+check-form{
+    width: 50%;
+    margin-left: 30%;
+}
+
+input:focus{
+    border: none;
+    text-align: right;
+    direction: rtl;
+}
+
+input{
+    font-size: 13px!important;
+    text-align: right;
+    border-bottom: 1px solid #a1adbe;
+    margin: 0px;
+    margin-bottom: 9px;
+    outline: none;
+    width: 131%;
+    margin-left: 7%;
+    height: 18px;
+}
+
+    input:focus{
+        outline: none;
+        text-align: right;
+    }
+
+    input{
+        border: none;
+        border-bottom: 1px solid #a1adbe;
+        outline: none;
+        outline-offset: 0px;
+        width: 125%;
+        margin-left: 14%;
+    }
+    input:focus{
+        border-bottom: 1px solid #a1adbe;
+        line-height: 22px;
+        padding: 6px;
+        outline-offset: 0px;
+        padding: 2px;
+    }
+    .input_form span{
+        margin-left: 14%;
+        margin-top: -10px;
+    }
+    .input_form{
+        border-radius: 2px;
+        background-color: white;
+        width: 53%;
+        height: 50%;
+        margin-left: 25%;
+        margin-top: 9%;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06),
+                    0px 2px 4px 0px rgba(0, 0, 0, 0.15),
+                    0 0 0 1px rgba(0, 0, 0, 0.06),
+                    0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+    .text_input{
+        font-size: 13px;
+        float: right;
+        margin-right: -54px;
+        color: #a1adbe;
+
+    }
+    .input_form h3{
+        float: right;
+        color: #18be8c;
+        margin: 15px;
+        margin-right: 48px;
+        height: 20%;
+    }
+
+    input::-webkit-input-placeholder {
+      color: #8b8b8b;
+      text-align:right;
+  }
+  .input_details{
+        width: 80%;
+        margin-left: 13px;
+    }
+  .input_details div{
+      margin-top: -10px;
+  }
+  div text {
+        border-bottom: 1px solid #fafafa;
+        color: #18be8c;
+        text-align: right;
+        float: right;
+        margin-right: 49px;
+        width: 86%;
+  }
+
+
+
+.status_account{
+    border-radius: 4px;
+    width: 50px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(0, 0, 0, 0.06),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    width: 98%;
+    margin-left: 2px;
+    margin-top: 25px;
+    background-color: #fff;
+}
+.h5{
+   text-align: right;
+   margin-right: 21px;
+   padding-top: 12px;
+}
+.details{
+   width: 73%;
+   margin-left: 20%;
+   text-align: right;
+}
+.text_hide {
+   width: 70%;
+   margin-left: 23%;
+}
+.text_hide small{
+   color : #a1adbe;
+
+}
+.text_hide div{
+   margin-bottom: 20px;
+}
+.chevron{
+   float: left;
+   margin: 5px;
+}
+.bold{
+   font-weight: bold;
+}
+.status_account.details_show{
+   margin: 15px;
+}
+.h12{
+   font-size: 14px;
+}
+
+.status_account .expired {
+      margin-right: 27px;
+}
+
+
+.green{
+    color: #18be8c;
+}
+.red{
+    color: #ff5a5f;
+}
