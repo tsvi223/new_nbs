@@ -1,0 +1,10 @@
+{
+
+    "host": "localhost",
+    "user": "postgres",
+    "password": "nbs123",
+    "port":"5432",
+    "database": "nbs",
+    "max": "10",
+    "idleTimeoutMillis": "30000"
+}

@@ -1,0 +1,10 @@
+{
+    "url_scraping_account" : "http://www.boi.org.il/_layouts/boi/handlers/WebPartHandler.aspx?wp=RestrictedAccountsSearch&lang=en&",
+    "url_scraping_personal" : "http://www.boi.org.il/_layouts/boi/handlers/WebPartHandler.aspx?wp=RestrictedAccountsSearch&lang=en&Company=",
+    "xray" : {
+        "selector_account" : "div .BoiRestrictedAccountsRestricted",
+        "selector_personal" : "div .BoiRestrictedCircumstancesCaseResult div",
+        "string_compare_account" : "The account number you have entered is not on the list of restricted accounts",
+        "string_compare_persoanl" : "not appear on the list"        
+    }
+}
