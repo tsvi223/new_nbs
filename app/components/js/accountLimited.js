@@ -31,7 +31,7 @@ function checkFormComponent($rootScope , accountLimitedService){
     ]
     view.changePerson = function(){ console.log(view.IDPerson);
         view.status = 'pending';
-        if(!view.IDPerson || view.list_inputs[view.list_inputs.length - 1].status == 'pending') {
+        if(!view.IDPerson) {
             view.list_inputs[view.list_inputs.length - 1].status = false;
             $rootScope.$emit('close status');
             return;
@@ -53,7 +53,7 @@ function checkFormComponent($rootScope , accountLimitedService){
     }
     view.changeAccount = function(){
         console.log(view.branch ,view.bank, view.account);
-        if(!view.branch || !view.bank || !view.account || view.list_inputs[0].status == 'pending'){
+        if(!view.branch || !view.bank || !view.account){
             view.list_inputs[0].status = false;
             $rootScope.$emit('close status');
             return;
