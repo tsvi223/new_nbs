@@ -7,12 +7,11 @@
     "express": "*",
     "body-parser":"*",
     "q": "*",
-    "express": "*",
     "path": "*",
     "http":"*",
     "request":"*",
-    "mongodb":"*",
     "x-ray":"*",
-    "mysql":"*"
+    "mysql":"*",
+    "pg" : "*"
   }
 }

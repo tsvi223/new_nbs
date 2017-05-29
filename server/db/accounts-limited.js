@@ -1,19 +1,19 @@
-var mysql = require('./connect');
+var sql = require('./connect_postgress');
 
 var statements = {
   add_account : 'INSERT INTO accounts_limited SET :account',
   accounts : 'SELECT * FROM accounts_limited',
-  check_accounts : 'SELECT * FROM accounts_limited WHERE bank = :bank && account = :account && branch = :branch'
+  check_accounts : 'SELECT * FROM test_nbs_accountlimited WHERE bank = :bank AND branch = :branch AND account = :account'
 };
 
 module.exports ={
     checkAccounts : function(account){
-        return mysql.Query(statements.check_accounts, {account : account});
+        return sql.Query(statements.check_accounts,  account);
     },
     addAccount :  function(account){
-        return mysql.Query(statements.add_account, {account : account});
+        return sql.Query(statements.add_account, {account : account});
     },
     accounts : function(){
-        return mysql.Query(statements.accounts);
+        return sql.Query(statements.accounts);
     }
 }

@@ -66,25 +66,40 @@ function req(method , url , options , body){
 // })
 
 
-req('GET' ,
-'http://www.boi.org.il/_layouts/boi/handlers/WebPartHandler.aspx?wp=RestrictedAccountsSearch&lang=en&Company=300446887'
-).then(function(html){
-    var x = xray();
-    //console.log(html);
-    x(html ,'div .BoiRestrictedCircumstancesCaseResult div' , { txt : '@html' }  )(function(err , obj){
-        var txt =  obj.txt.trim().replace(/Number  does|<span class="BoiRestrictedCircumstancesCaseId"><\/span>/g , '')
-        console.log(txt.indexOf('not appear on the list'));
+
+
+
+function fixQuery(query , values){
+    var test = query.match(/:.\S+/g)
+
+    var result = {
+         query : query ,
+         values : []
+     }
+    test.forEach(function(item , index){
+        result.query = result.query.replace(item , '$' + (index + 1) )
+        item = item.replace(':' , '');
+        result.values.push(values[item])
     })
+    console.log(result);
+    return result
+}
 
-})
+function fixQuery2(text , values){
+    var query_parameter = text.match(/:.\S+/g)
 
+    var result = {
+         text : text ,
+         values : []
+     }
 
+    query_parameter.forEach(function(item , index){
+        result.text = result.text.replace(item , '$' + (index + 1) )
+        item = item.replace(':' , '');
+        result.values.push(values[item])
+    })
+    console.log(result);
+    return result
+}
 
-
-
-var arr = [ {a : 1} , { b : 2 } ];
-
-var filt =  arr.filter(function(item){
-    if(item['a'] == 2 ) return item;
-})
-console.log();
+fixQuery2('SELECT * FROM test_nbs_accountlimited WHERE bank = :bank AND branch = :branch AND account = :account' , { account : 11 , branch : 22 , bank : 45 } )

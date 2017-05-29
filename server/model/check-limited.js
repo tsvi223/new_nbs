@@ -56,7 +56,7 @@ function checkLimitedDB(bank , branch , acount_number){
     var account = {
         bank : bank,
         branch : branch,
-        acount_number : acount_number
+        account : acount_number
     }
     console.log(account);
     return DBAccountLimited.checkAccounts(account).then(function(result){ console.log(result);
