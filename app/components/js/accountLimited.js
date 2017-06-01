@@ -29,9 +29,9 @@ function checkFormComponent($rootScope , accountLimitedService){
         { textHolder : view.name ,  name : 'namePerson',  txt : 'שם' , status :  false } ,
         { textHolder : view.id ,  name : 'IDPerson',  txt : 'מ.ז / תאגיד' , status :  false }
     ]
-    view.changePerson = function(){ console.log(view.IDPerson);
+    view.changePerson = function(){
         view.status = 'pending';
-        if(!view.IDPerson) {
+        if(!view.IDPerson || view.IDPerson.toString().length  < 4) {
             view.list_inputs[view.list_inputs.length - 1].status = false;
             $rootScope.$emit('close status');
             return;
@@ -47,13 +47,11 @@ function checkFormComponent($rootScope , accountLimitedService){
                 type : 'person',
                 status : result.status
             }
-
             $rootScope.$emit('send status' , sendDetails);
         })
     }
     view.changeAccount = function(){
-        console.log(view.branch ,view.bank, view.account);
-        if(!view.branch || !view.bank || !view.account){
+        if(!view.branch || !view.bank || !view.account || view.account.toString().length  < 4){
             view.list_inputs[0].status = false;
             $rootScope.$emit('close status');
             return;

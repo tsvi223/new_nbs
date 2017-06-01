@@ -20,8 +20,9 @@
           <div class="col-sm-4" ng-repeat='item in $ctrl.list_inputs'>
                 <div class="input_details" >
 
-                    <input ng-if='item.name != "IDPerson"' class='' ng-model='$ctrl[item.name]' ng-change="$ctrl.changeAccount()">
-                    <input ng-if='item.name == "IDPerson"' class='' ng-model='$ctrl[item.name]' ng-change="$ctrl.changePerson()">
+                    <input ng-if='item.name == "namePerson"' class='' ng-model='$ctrl[item.name]' ng-change="$ctrl.changeAccount()">
+                    <input type="number" ng-if='item.name != "IDPerson" && item.name != "namePerson"' class='' ng-model='$ctrl[item.name]' ng-change="$ctrl.changeAccount()">
+                    <input type="number" ng-if='item.name == "IDPerson"' class='' ng-model='$ctrl[item.name]' ng-change="$ctrl.changePerson()">
 
                     <div>
                         <text class='text_input '
